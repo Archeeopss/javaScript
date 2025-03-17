@@ -30,4 +30,19 @@ console.log(typeof player10[friends]);
 
 //changing values in object
 player10.team = "MSBY"
-Object.freeze(player10)
+// Object.freeze(player10)
+// player10.team = "MSBY2"
+console.log(player10);
+
+player10.greeting = function(){
+    console.log("I'm Hinata Shoyo from concrete");
+}
+
+player10.greeting2 = function(){
+    console.log(`I'm Hinata Shoyo from concrete, I play as a ${this.position}`); 
+} //referencing object elements
+
+console.log(player10.greeting());
+console.log(player10.greeting2());
+
+

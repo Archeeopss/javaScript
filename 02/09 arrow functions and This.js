@@ -56,7 +56,7 @@ console.log(mul(4, 6));
 const uname = (num1) => ({un: "Chinen Miya"}) //returning an object
 console.log(uname(5));
 
-const arr = [2, 3, 5, 6, 8, 4, 7]
-arr.forEach(function() {})
-arr.forEach(() => {})
-arr.forEach(() => ())
+// const arr = [2, 3, 5, 6, 8, 4, 7]
+// arr.forEach(function() {})
+// arr.forEach(() => {})
+// arr.forEach(() => ())

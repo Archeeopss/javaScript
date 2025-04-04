@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body 
+style="background-color: #0e0d0d; color: #69bcf3;">
+    <div class="parent">
+        <div class="Seijoh">Oikawa Torru</div>
+        <div class="Seijoh">Iwaizumi Hajime</div>
+        <div class="Seijoh">Kindaichi Yutaro</div>
+        <div class="Seijoh">Matsukawa Issei</div>
+        <div class="Seijoh">Hanamaki Takahiro</div>
+        <div class="Seijoh">Kunimi AKira</div>
+        <div class="Seijoh">Kyotani kentaro</div>
+        <div class="Seijoh">Watari Shinji</div>
+        <div class="Seijoh">Yahaba Shigeru</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);        
+    }
+
+    parent.children[0].style.color="white"
+    
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    const BlueCastle = document.querySelector('.Seijoh')
+    console.log(BlueCastle);
+    console.log(BlueCastle.parentElement);
+    console.log(BlueCastle.nextElementSibling);
+
+    console.log("Nodes: ", parent.childNodes);
+    
+    
+</script>
+</html>

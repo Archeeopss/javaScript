@@ -10,7 +10,7 @@ theyre executed immediately
 
 (function f(a, b) {
     return a + b;
-  })(2, 3);
+})(2, 3);
 
 // writing it in arrow form
 ( function three() {

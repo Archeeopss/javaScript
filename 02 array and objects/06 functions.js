@@ -35,6 +35,7 @@ function logintext(username) {
 }
 
 console.log(logintext("Miya"));
+console.log(logintext());
 
 
 function lgntxt (username = user){

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #0e0d0d; color: #69bcf3;">
+    <ul class="Nekoma">
+        <li>Kuroo Tetsuro</li>
+    </ul>
+</body>
+<style> </style>
+<script>
+    function players(plName) {
+        const li = document.createElement('Li');
+        li.innerHTML = `${plName}`
+        document.querySelector('.Nekoma').appendChild(li)
+    }
+    players("Kozume Kenma")
+    players("Yamamoto Taketora")
+    //not so optimized way
+
+    function addpl(name){
+        const li = document.createElement('Li');
+        li.appendChild(document.createTextNode(name))
+        document.querySelector('.Nekoma').appendChild(li)
+    }
+    addpl("Haiba Lev")
+    //more optimized
+
+    //Edit
+    const editPlayers = document.querySelector("li:nth-child(4)")
+    //editPlayers.innerHTML = "Yaku Morisuke"
+    const newplay = document.createElement('li')
+    newplay.textContent = "Inuoka Sou"
+    editPlayers.replaceWith(newplay)
+
+    //edit
+    const nplay = document.querySelector("li:first-child")
+    nplay.outerHTML = '<li>Yaku Morisuke</li>'
+
+    //remove
+    const mplay = document.querySelector('li:last-child')
+    mplay.remove()
+</script>
+</html>

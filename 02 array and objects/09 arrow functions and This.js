@@ -22,20 +22,20 @@ however, when this is run in browser console, this gives out windows as the obje
 
 function any1(){
     let username = "Oscar"
-    console.log(this.username);
+    console.log(this.username); //un needs to be an object
 }
 any1()
 
 const any2 = function(){
     let username = "Oscar"
-    console.log(this.username);
+    console.log(this.username); // un needs to be an object[Iys inside the function rn andf hwence a const/string in a function not striong wothon an object]
 }
 any2()
 
 const any3 = () => {
     let username = "Oscar"
     console.log(this);
-    console.log(this.username);
+    console.log(this.username);//this only works in a function, the un is an obj here but this is not inside a function
 }
 any3()
 

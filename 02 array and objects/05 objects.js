@@ -10,9 +10,13 @@ const Player1 = {
 
 const {Team} = Player1
 console.log(Team);
-
+ 
 const {position: pos} = Player1
 console.log(pos);
+
+const {name} = Player1
+console.log(name);
+
 
 /* const navbar = () => {
 

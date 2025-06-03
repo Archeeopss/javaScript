@@ -31,7 +31,7 @@ console.log(Math.round(4.6));
 console.log(Math.ceil(4.2));//rounds off to a higher number
 console.log(Math.floor(4.6)); //rounds off to a lower number
 //random number
-console.log(Math.random()); //value comes in floating point bw 0 amd 1
+console.log(Math.random()); //value comes in floating point bw 0 and 1
 console.log((Math.random()*10) + 1);
 
 //imp

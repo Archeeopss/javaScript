@@ -1,10 +1,10 @@
 const Fukurodani = ["Bokuto", "Akaashi", "Komi", "Washio", "Sarukui", "Konoha", "Anahori", "Onaga"]
 const Karasuno = ["Daichi", "Sugawara", "Nishinoya", "Asahi", "Ryunosuke", "Tabio", "Shoyo", "Yamaguchi", "Kei"]
 
-// Fukurodani.push(Karasuno)
-// console.log(Fukurodani);
-// console.log(Fukurodani[8]);
-// console.log(Fukurodani[8][2]);
+Fukurodani.push(Karasuno)
+console.log(Fukurodani);
+console.log(Fukurodani[8]);
+console.log(Fukurodani[8][2]);
 
 const nationals = Fukurodani.concat(Karasuno)
 console.log(nationals);

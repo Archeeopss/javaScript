@@ -27,8 +27,8 @@ if(Object.keys(obj).length === 0){
 //Nullish Coalescing Operator (??): [keywords: null, undefined]
 
 let v1;
-v1 = 5 ?? 10
-console.log(v1);
+v1 = 5 ?? 10  //nullish coalescing operator (??), which returns the right-hand operand only if the left-hand operand is null or undefined.
+console.log(v1); //5 is not null or undefined, so the ?? operator returns 5, not 10.
 let v2;
 v2 = null ?? 10
 console.log(v2);

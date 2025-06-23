@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: black; color: aqua;">
+    <h2>Haikyuu Setters</h2>
+    <div>
+        <ul id="images">
+            <li><img width="600px" id="Oikawa" src="https://i.pinimg.com/736x/74/a6/45/74a645f3ef3aeb68925e4c516a48b863.jpg" alt="AobaJosei"></li>
+            <li><img width="600px" id="Kenma" src="https://i.pinimg.com/736x/5f/24/80/5f2480f917a3731ed956531cab1bc55b.jpg" alt="Nekoma"></li>
+            <li><img width="600px" id="Atsumu" src="https://i.pinimg.com/736x/31/01/fa/3101fac4c21b178cfea0ef36d811bdbe.jpg" alt="Inarizaki"></li>
+            <li><img width="600px" id="Kageyama" src="https://i.pinimg.com/736x/11/78/8d/11788d63f9733cfda0cdc9f833af6894.jpg" alt="Karasuno"></li>
+            <li><img width="600px" id="Akaashi" src="https://i.pinimg.com/736x/f8/5a/4a/f85a4ad7ed4dd64c2f07299b394ae785.jpg" alt="Fukurodani"></li>
+            <li><a style="color: #9ff7d9; padding: 15; background-color: #48485c;" href="https://www.google.com/" id="SearchBar">Search Here</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // //attachEvent()
+    // //jQuery--> on
+    // //addEventListener
+    // document.getElementById("Oikawa").addEventListener('click', function() {
+    //     alert(`Aoba Josei`)
+    // })
+    // document.getElementById("Kenma").addEventListener('click', function(eo){
+    //     console.log(eo);
+    // }, false)
+    // //events to study- type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget
+    // //position related- clientX, clientY, screenX, screenY
+    // //altkey, ctrlkey, shiftkey, keyCode
+
+    // //event propagation:- 
+    // // <a> event bubbling   
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul")
+    // }, false)
+    // document.getElementById('Atsumu').addEventListener('click', function(e){
+    //     console.log("Inarizaki");
+    // }, false)
+
+    // // <b> event capturing
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul")
+    // }, true)
+    // document.getElementById('Atsumu').addEventListener('click', function(e){
+    //     console.log("Inarizaki");
+    // }, true)
+
+    // //stopping bubbling
+    // document.getElementById('Kageyama').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     console.log("Inarizaki");
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target);
+        console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let remove = e.target.parentNode
+            remove.remove()    // --> this is a valid method ---> if this line is used on its own then --- if the list is clicked as in the bulltet point or number or whatever then the entire list gets removed--which is why the conditionalas and checks are used 
+        }
+        
+        
+        // remove.parentNode.removeChild(remove) //second way to remove the list item
+    }, false)
+
+</script>
+</html>
